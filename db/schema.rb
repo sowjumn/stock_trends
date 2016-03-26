@@ -11,9 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160326225303) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "stocks", force: true do |t|
+    t.string "company"
+    t.string "stock_symbol"
+  end
+
+  create_table "trends", force: true do |t|
+    t.integer "stock_id"
+    t.integer "price"
+    t.date    "price_date"
+  end
 
 end
