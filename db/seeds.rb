@@ -19,4 +19,7 @@ stocks.each do |s|
   100.times do |i|
     s.trends.create(price: prng.rand(100..500), price_date: (Date.current - (i).day))
   end
+  0.upto(100) do |i|
+    s.trends.create(price: prng.rand(100..500), price_date: (Date.current + (i).day))
+  end
 end

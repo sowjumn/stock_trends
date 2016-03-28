@@ -1,0 +1,14 @@
+<h1>Welcome to Stock Trends</h1>
+<div class="row">
+  <div class="right-align">
+    <label for="stock_symbol_id" class="stock-label">STOCK: </label>
+    <select name="stock_symbols" id="stock_symbol_id">
+      <% @stocks.each do |s| %>
+        <option value="<%=s.stock_symbol %>"><%= s.company %></option>
+      <% end %>
+    </select>
+  </div>
+</div>
+
+
+<svg id="visualization" width="1000" height="800"></svg> 
